@@ -1,0 +1,13 @@
+<agm-map (mapClick)="agregarMarcador($event)" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+    <ng-container *ngFor="let marcador of marcadores; let i = index">
+        <agm-marker [latitude]="marcador.lat" [longitude]="marcador.lng" *ngIf="i==marcadores.length-1">
+            <agm-info-window>
+                <h6 class="text-center">{{marcador.titulo}}</h6>
+                <p class="text-danger text-center fw-bold" >Zona Restringida</p>
+                <a class="btn btn-primary" href="assets/nuevasmedidas-22e.pdf" download="Medidas_Sanitarias">
+                    Descargar Medidas Sanitarias
+                    </a>
+            </agm-info-window>
+        </agm-marker>
+    </ng-container>
+</agm-map>  

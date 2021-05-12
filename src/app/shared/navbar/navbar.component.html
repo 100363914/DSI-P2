@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="mapa" routerLinkActive="active">Easy-Covid</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="mapa" routerLinkActive="active">Mapa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="datos" routerLinkActive="active">Datos Sanitarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="anteriores" routerLinkActive="active" >Búsquedas Recientes</a>
+          </li>
+        </ul>
+        <form class="d-flex" id="busqueda" [formGroup]="busqueda" (ngSubimt)="buscar()">
+            <input class="form-control me-2" type="search" formControlName="barra" placeholder="Introduce una dirección" aria-label="Search">  
+            <button class="btn btn-outline-light" type="button" (click)=buscar()><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>

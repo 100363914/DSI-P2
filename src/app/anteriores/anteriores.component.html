@@ -1,0 +1,16 @@
+<table class="table table-dark table-striped text-center">
+    <thead>
+        <tr>
+          <th scope="col">Latitud(Municipio)</th>
+          <th scope="col">Longitud(Dirección)</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let marcador of marcadores; let i= index'>
+            <th>{{marcador.lat}}</th>
+            <th>{{marcador.lng}}</th>
+            <th><button class="btn btn-danger" (click)=borrar(i)><i class="fas fa-trash-alt"></i></button></th>
+        </tr>
+      </tbody>
+  </table>
